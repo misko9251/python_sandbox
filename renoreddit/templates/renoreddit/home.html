@@ -3,10 +3,14 @@
 
     <!-- Similar to EJS, templating engine -->
     {% for post in posts %}
-    <article class="container">
-        <h1>{{ post.title }}</h1>
-        <p>Written by {{ post.author }} on {{ post.date }}</p>
-        <p>{{ post.content }}</p>
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <h1 class="article-content">{{ post.title }}</h1>
+                <p class="article-content">Written by <a href="#">{{ post.author }} </a>on {{ post.date }}</p>
+            </div>
+            <p class="article-content">{{ post.content }}</p>
+        </div>
     </article>
     {% endfor %}
 
