@@ -7,13 +7,13 @@ posts = [
     {
         'author': 'Misko',
         'title': 'Subway tile install',
-        'content': 'Installing subway tile is annoying. Pick a large tile!',
+        'content': 'Installing subway tile is annoying. Pick a large tile! You will never regret it. Lorem ipsum blah blah blah. Installing subway tile is annoying. Pick a large tile! You will never regret it. Lorem ipsum blah blah blah.',
         'date': 'January 19, 2024'
     },
         {
         'author': 'Lia-Marie',
         'title': 'Shiplap: Still in Style',
-        'content': 'Going for a farmhouse look? Give it a try!',
+        'content': 'Going for a farmhouse look? Give it a try! But make sure you buy enough, otherwise you end up like me and go to Home Depot three times! Going for a farmhouse look? Give it a try! But make sure you buy enough, otherwise you end up like me and go to Home Depot three times!',
         'date': 'January 15, 2024'
     }
 ]

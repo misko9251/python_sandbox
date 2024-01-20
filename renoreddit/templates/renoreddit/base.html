@@ -37,28 +37,27 @@
           </div>
         </nav>
       </header>
-    <!-- Block so child templates can override. Reasoning: Less duplicate code -->
     <main role="main" class="container">
         <div class="row">
           <div class="col-md-8">
+            <!-- Block so child templates can override. Reasoning: Less duplicate code -->
             {% block content %}{% endblock %}
           </div>
           <div class="col-md-4">
-            <div class="content-section">
-              <h3>Quick Links</h3>
-              <p class='text-muted'>Take a look around!
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-light">Recent</li>
-                  <li class="list-group-item list-group-item-light">Best</li>
-                  <li class="list-group-item list-group-item-light">New</li>
-                  <li class="list-group-item list-group-item-light">About</li>
+            <div class="content-container">
+              <h3><i class="fa-solid fa-link fa-xs"></i> Quick Links</h3>
+                <ul class="list-group" style="list-style-type: none;">
+                  <li class=""><span class="fa-container"><i class="fa-solid fa-signal"></i></span> Recent</li>
+                  <li class=""><span class="fa-container"><i class="fa-solid fa-fire"></i></span> Best</li>
+                  <li class=""><span class="fa-container"><i class="fa-solid fa-star"></i></span> New</li>
+                  <li class=""><span class="fa-container"><i class="fa-solid fa-person-shelter"></i></span> About</li>
                 </ul>
-              </p>
             </div>
           </div>
         </div>
       </main>
 
+      <script src="https://kit.fontawesome.com/c3a68ff822.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

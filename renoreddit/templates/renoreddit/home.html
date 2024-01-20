@@ -7,9 +7,9 @@
         <div class="media-body">
             <div class="article-metadata">
                 <h1 class="article-content">{{ post.title }}</h1>
-                <p class="article-content">Written by <a href="#">{{ post.author }} </a>on {{ post.date }}</p>
+                <p class="article-content">Written by <a class="article-author" href="#">{{ post.author }} </a>on {{ post.date }}</p>
             </div>
-            <p class="article-content">{{ post.content }}</p>
+            <p class="article-content article-paragraph">{{ post.content }}</p>
         </div>
     </article>
     {% endfor %}
