@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
+# Use SQL lite for developement and postgres for production
 
 posts = [
     {
