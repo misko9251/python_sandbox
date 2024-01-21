@@ -1,0 +1,22 @@
+{% extends "renoreddit/base.html" %}
+{% block content %}
+
+    <div class="content-section">
+        <form method="POST">
+            <!-- CSRF token (cross site request forgery token to protect against attacks) We need this for the form to work-->
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-3">Sign Up</legend>
+                <!-- Pull in the form we passed on the backend in views -->
+                {{ form.as_p }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Register</button>
+            </div>
+        </form>
+        <div class="bottom-top pt-2">
+            <small class="text-muted">Already joined? <a href="#" class="ml-2">Sign In</a></small>
+        </div>
+    </div>
+
+{% endblock content %}
