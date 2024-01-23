@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages # this will allow us to send flash messages
+from django.contrib.auth.decorators import login_required 
 from django.contrib.auth import logout # new django update made logging out HAVE to be a POST request
 from .forms import UserRegistrationForm # import the form we built in forms.py
 
 def register(request):
+    if request.user.is_authenticated:
+        return redirect('profile')  # Redirect to the profile page or another page for authenticated users
+
     if request.method == 'POST': # If we are making a post request, then check if valid, if so, grab the username and store as a var
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
@@ -21,5 +25,6 @@ def logout_view(request):
     logout(request)
     return render(request, 'users/logout.html')
 
+@login_required
 def profile(request):
     return render(request, 'users/profile.html')

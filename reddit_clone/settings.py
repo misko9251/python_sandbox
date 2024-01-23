@@ -132,3 +132,4 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 LOGIN_REDIRECT_URL = 'renoreddit-home'
 LOGOUT_REDIRECT_URL = 'logout'
+LOGIN_URL = 'login'
