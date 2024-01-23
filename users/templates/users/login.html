@@ -7,16 +7,16 @@
             <!-- CSRF token (cross site request forgery token to protect against attacks) We need this for the form to work-->
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-3">Sign Up</legend>
+                <legend class="border-bottom mb-3">Login</legend>
                 <!-- Pull in the form we passed on the backend in views -->
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Register</button>
+                <button class="btn btn-outline-info" type="submit">Login</button>
             </div>
         </form>
         <div class="bottom-top pt-2">
-            <small class="text-muted">Already joined? <a href="{% url 'login' %}" class="ml-2">Sign In</a></small>
+            <small class="text-muted">Need an account? <a href="{% url 'register' %}" class="ml-1">Sign Up</a></small>
         </div>
     </div>
 

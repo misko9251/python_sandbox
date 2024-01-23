@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages # this will allow us to send flash messages
+from django.contrib.auth import logout # new django update made logging out HAVE to be a POST request
 from .forms import UserRegistrationForm # import the form we built in forms.py
 
 def register(request):
@@ -10,8 +11,12 @@ def register(request):
             form.save()
             # Grab username from form so we can send flash message upon sign up
             username = form.cleaned_data.get('username')
-            messages.success(request, f'New account created for {username}!')
-            return redirect('renoreddit-home')
+            messages.success(request, f'Hi {username}! Your account has been created. Please login below.')
+            return redirect('login')
     else:
         form = UserRegistrationForm()
     return render(request, 'users/register.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'users/logout.html')
